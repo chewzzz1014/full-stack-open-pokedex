@@ -29,3 +29,8 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
+      - name: Render.com deploy
+        uses: ttskch/render-deploy@v1.0.0
+        with:
+          api-key: ${{ secrets.RENDER_API_KEY}}
+          service-id: ${{ secrets.RENDER_SERVICE_ID }
