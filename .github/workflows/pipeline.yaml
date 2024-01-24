@@ -33,7 +33,7 @@ jobs:
       #     start: npm run start-prod
       #     wait-on: http://localhost:5000
       - name: Render.com deploy
-        if: ${{ github.event_name == 'push' }} # only execute this step when code is merged/pushed to main branch
+        if: ${{ github.event_name == 'push' }}
         uses: ttskch/render-deploy@v1.0.0
         with:
           api-key: ${{ secrets.RENDER_API_KEY}}
